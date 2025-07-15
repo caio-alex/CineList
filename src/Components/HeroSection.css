@@ -1,0 +1,59 @@
+/* src/Components/HeroSection.css */
+.hero-section {
+  width: 100%;
+  height: 60vh; /* Ajuste a altura conforme necessário */
+  background-image: url('https://hdqwalls.com/download/the-avengers-marvel-comics-oc-3840x2400.jpg'); /* Adicione uma imagem de fundo se quiser */
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6); /* Overlay escuro para melhorar a legibilidade do texto */
+  z-index: 1;
+}
+
+.hero-content {
+  z-index: 2;
+  padding: 20px;
+  max-width: 800px;
+}
+
+.hero-content h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.hero-content p {
+  font-size: 1.2em;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.hero-button {
+  background-color: #237; /* Exemplo de cor de destaque (Netflix red) */
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.1em;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #f7d354;
+}

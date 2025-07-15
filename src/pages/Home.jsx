@@ -4,6 +4,7 @@ const moviesURL = import.meta.env.VITE_API;
 const apiKey = import.meta.env.VITE_API_KEY;
 
 import "../pages/MovieStyle.css";
+import HeroSection from "../Components/HeroSection";
 
 const Home = () => {
   console.log(moviesURL, apiKey);
@@ -25,7 +26,8 @@ const Home = () => {
 
   return (
   <div className="container">
-    <h2 className="title">Melhores Filmes</h2>
+    <HeroSection  />  
+    <h2 className="title" id="movie-list-section">Melhores Filmes</h2>
     <p className="description">Veja os filmes mais bem avaliados pelos usuários!</p>
     <div className="movies-container">
       {topMovies.length === 0 && <p>Carregando...</p>}

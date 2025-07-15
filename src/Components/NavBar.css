@@ -2,9 +2,15 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem 2rem;
-    background-color: #333;
+    padding: 1rem 1.5rem;
+    background-color: rgba(36, 43, 64, 0.8);
     color: white;
+    position: fixed; 
+    top: 0;          
+    left: 0;         
+    width: 100%;     
+    z-index: 1000;   
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.6); 
     
 }
 
@@ -13,6 +19,22 @@
     align-items: center;
     font-size: 1.5rem;
     margin: 0;
+}
+
+#navbar .cinelist{
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    p{
+        margin: 0;
+        
+    }
+    @media screen and (max-width: 510px) {
+        p{
+            display: none;
+        }
+    }
+    
 }
 
 #navbar form{
@@ -45,3 +67,9 @@
     transform: scale(1.04);
 }
 
+#navbar  button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    
+}

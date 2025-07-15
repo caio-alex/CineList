@@ -1,10 +1,9 @@
 .container .title {
   font-size: 2rem;
-  color: #fff;
-  margin-bottom: 1rem 0 1rem;
+  color: var(--text-color);
+  margin: 2rem 0;
   text-align: center;
   padding: 2rem 0;
-
 }
 
 .title .query-text {
@@ -13,75 +12,109 @@
 
 .description {
   font-size: 1.2rem;
-  color: #ccc;
+  color: var(--text-color);
   text-align: center;
   margin-bottom: 2rem;
 }
 
 .movies-container {
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  gap: 1rem;
+  flex-wrap: wrap; 
+  justify-content: center; 
+  gap: 1rem; 
   max-width: 1200px;
-  margin: 0 auto;
-  
+  margin: auto; 
+  padding: 1rem; 
 }
 
-.movies-container div {
-  width: 30%;
+.movies-container div.movie-card { 
   background-color: rgb(36, 43, 64);
-  padding: 0 1rem 1.3rem 1rem;
-  border-radius: 8px;
-  overflow: hidden;
+  border: 2px solid rgb(36, 43, 64);
+  /* padding-bottom: 1rem;  */
+  border-radius: 16px; 
+  color: #fff;
+  cursor: pointer;
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 0.3s ease;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center; 
+  text-align: center;
+  font-weight: bold;
+  overflow: hidden; 
+  transition: 0.3s ease; 
+  flex-basis: 200px; 
 }
 
-.movies-container div:hover {
-  transform: scale(1.03);
-}
-
-
-.movies-container div img, 
-.movies-container div h2,
-.movies-container div p {
+.movies-container div.movie-card img {
+  width: 100%; 
+  height: auto; 
+  display: block;
   margin-bottom: 1rem;
-}
-.movies-container div svg{
-    color: #f7d354;
-}
-
-.movies-container div {
-    padding:  0.3rem auto;
-    border-radius: 16px;
-    border: 2px solid rgb(36, 43, 64);
-    background-color: rgb(36, 43, 64);
-    color: #fff;
-    cursor: pointer;
-    display: flex;
-    align-items: center;
-    transition: 0.3s ease;
-    text-align: center;
-    font-weight: bold;
+  border-top-left-radius: 14px; 
+  border-top-right-radius: 14px;
 }
 
-.movies-container div a{
-    border: solid 2px #f7d354;
-    background-color: #237;
-    border-radius: 4px;
-    padding: 1rem;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    text-align: center;
+.movies-container div.movie-card h2,
+.movies-container div.movie-card p {
+  margin-bottom: 1rem; 
+  padding: 0 0.5rem; 
 }
 
-.movies-container div:hover{
-    background-color: transparent;
-    color: #f7d354;
-    transform: scale(1.02);
+.movies-container div.movie-card svg {
+  color: #f7d354;
+}
+
+.movies-container div.movie-card a.btn { 
+  
+  background-color: #237; 
+  padding: 0.8rem 1rem; 
+  width: 100%;
+  margin-top: auto; 
+  display: block; 
+  color: #fff; 
+  text-decoration: none; 
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+
+.movies-container div.movie-card:hover {
+  background-color: #000;
+  color: #f7d354; 
+  transform: scale(1.03); 
+  border-color: #f7d354; 
+
+}
+
+.movies-container div.movie-card:hover a.btn {
+    background-color: #f7d354; 
+    color: rgb(36, 43, 64); 
+    border-color: #f7d354;
+}
+
+@media (max-width: 1200px) {
+  .movies-container div.movie-card {
+    max-width: calc((100% / 4) - 1rem);
+  }
+}
+
+@media (max-width: 992px) {
+  .movies-container div.movie-card {
+    max-width: calc((100% / 3) - 1rem); 
+  }
+}
+
+@media (max-width: 768px) {
+  .movies-container div.movie-card {
+    max-width: calc((100% / 2) - 1rem); 
+  }
+}
+
+@media (max-width: 576px) {
+  .movies-container div.movie-card {
+    flex-basis: 100%;
+    max-width: 90%; 
+  }
+  .movies-container {
+    justify-content: center; 
+  }
 }
