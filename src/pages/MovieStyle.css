@@ -27,6 +27,16 @@
   padding: 1rem; 
 }
 
+.movie-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  margin: 0 0 0 0;
+}
+
 .movies-container div.movie-card { 
   background-color: rgb(36, 43, 64);
   border: 2px solid rgb(36, 43, 64);
@@ -56,8 +66,7 @@
 
 .movies-container div.movie-card h2,
 .movies-container div.movie-card p {
-  margin-bottom: 1rem; 
-  padding: 0 0.5rem; 
+  padding:  0.5rem; 
 }
 
 .movies-container div.movie-card svg {
